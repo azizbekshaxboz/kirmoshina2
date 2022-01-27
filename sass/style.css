@@ -1,0 +1,403 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Nova+Mono&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+  background: #92bfd1;
+  font-size: 14px;
+  font-family: 'Nova Mono', monospace;
+}
+
+#wrapper {
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#washingMachine {
+  background: #ececf4;
+  width: 300px;
+  height: 388.23529px;
+  border-radius: 15px;
+  border-top: 15px solid #80819c;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  overflow: hidden;
+  -webkit-box-shadow: inset -15px -15px 0 0 rgba(196, 196, 210, 0.3);
+          box-shadow: inset -15px -15px 0 0 rgba(196, 196, 210, 0.3);
+  padding: 85px 0 45px;
+}
+
+#washingMachine:before, #washingMachine:after {
+  content: "";
+  position: absolute;
+  border: 4px solid transparent;
+  width: 150%;
+}
+
+#washingMachine:before {
+  border-bottom-color: #c4c4d2;
+  height: 70px;
+  top: 0;
+  border-radius: 50%;
+  -webkit-box-shadow: inset 0 -15px 0 0 rgba(196, 196, 210, 0.3);
+          box-shadow: inset 0 -15px 0 0 rgba(196, 196, 210, 0.3);
+}
+
+#washingMachine:after {
+  border-top-color: #c4c4d2;
+  height: 30px;
+  bottom: 0;
+}
+
+#washingMachine #controls {
+  top: 19.09091px;
+  text-align: center;
+  right: 30px;
+  background: #242527;
+  color: lightgreen;
+  border-radius: 5px;
+  padding: 3px 10px;
+  font-weight: 500;
+  font-size: 1em;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#washingMachine #controls, #washingMachine #controls:before, #washingMachine #controls:after {
+  position: absolute;
+}
+
+#washingMachine #controls, #washingMachine #controls:after {
+  height: 23.86364px;
+  min-width: 60px;
+}
+
+#washingMachine #controls, #washingMachine #controls:before {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 0.2s cubic-bezier(0.56, 0.35, 0, 1.35);
+  transition: all 0.2s cubic-bezier(0.56, 0.35, 0, 1.35);
+}
+
+#washingMachine #controls:before {
+  content: "━━";
+  font-size: 14px;
+  color: #80819c;
+  -webkit-box-shadow: inset 0px -15px 0px 0px rgba(196, 196, 210, 0.3);
+          box-shadow: inset 0px -15px 0px 0px rgba(196, 196, 210, 0.3);
+  height: 31.81818px;
+  width: 31.81818px;
+  border: 3px solid #c4c4d2;
+  border-radius: 100%;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  left: calc(100% + -135.90909px);
+}
+
+#washingMachine #controls:after {
+  content: "";
+  left: calc(100% + -240px);
+  background: rgba(196, 196, 210, 0.3);
+  border-radius: 3px 3px 10px 10px;
+  border: 3px solid #c4c4d2;
+  -webkit-box-shadow: inset 0 10px 0 0 #c4c4d2;
+          box-shadow: inset 0 10px 0 0 #c4c4d2;
+}
+
+#washingMachine #door, #washingMachine #tub {
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+#washingMachine #door {
+  width: 200px;
+  height: 200px;
+  border: 25px solid #80819c;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 1;
+  -webkit-box-shadow: inset 5px 10px 0 0 rgba(0, 0, 0, 0.1), 5px -1px 0 0 transparent;
+          box-shadow: inset 5px 10px 0 0 rgba(0, 0, 0, 0.1), 5px -1px 0 0 transparent;
+  -webkit-transform-origin: 0% 0%;
+          transform-origin: 0% 0%;
+  -webkit-transform: rotateY(0deg);
+          transform: rotateY(0deg);
+}
+
+#washingMachine #door:before, #washingMachine #door:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+#washingMachine #door:after {
+  background: #666783;
+  height: 50%;
+  width: 17%;
+  right: 0;
+  border-radius: 40% 30% 30% 40% / 50% 45% 45% 50%;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  z-index: 3;
+}
+
+#washingMachine #door:before {
+  width: 60%;
+  height: 60%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  border-radius: 50%;
+  border: 5px solid transparent;
+  border-left: 15px solid white;
+  -webkit-transform: translateY(-50%) rotate(45deg);
+          transform: translateY(-50%) rotate(45deg);
+  opacity: 0.2;
+  -webkit-box-shadow: inset -10px 10px 0 0 rgba(255, 255, 255, 0.2);
+          box-shadow: inset -10px 10px 0 0 rgba(255, 255, 255, 0.2);
+  border-radius: 40% 30% 30% 40% / 50%;
+  z-index: 2;
+}
+
+#washingMachine #tub {
+  width: 175px;
+  height: 175px;
+  background: #453e57;
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+  z-index: 0;
+  -webkit-box-shadow: 0 0 0 7px rgba(196, 196, 210, 0.3);
+          box-shadow: 0 0 0 7px rgba(196, 196, 210, 0.3);
+}
+
+#washingMachine #tub .clothes {
+  position: absolute;
+  opacity: 0;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+
+#washingMachine #tub .clothes:nth-child(1) {
+  background: -webkit-gradient(linear, left top, left bottom, from(#48873e), to(#7b9f17));
+  background: linear-gradient(#48873e, #7b9f17);
+  width: 70%;
+  height: 25%;
+  bottom: 10%;
+  right: -20%;
+  -webkit-transform: rotate(-20deg);
+          transform: rotate(-20deg);
+  border-radius: 49% 38% 65% 8% / 30% 12% 51% 36%;
+}
+
+#washingMachine #tub .clothes:nth-child(2) {
+  background: -webkit-gradient(linear, left top, left bottom, from(#c22323), to(#e15050));
+  background: linear-gradient(#c22323, #e15050);
+  width: 100%;
+  height: 20%;
+  border-radius: 64% 40% 27% 47% / 63% 63% 32% 36%;
+  bottom: 0;
+}
+
+#washingMachine #tub .clothes:nth-child(3) {
+  background: -webkit-gradient(linear, left top, left bottom, from(#5a5589), to(#4f46b4));
+  background: linear-gradient(#5a5589, #4f46b4);
+  width: 70%;
+  height: 25%;
+  -webkit-transform: rotate(40deg);
+          transform: rotate(40deg);
+  border-radius: 41% 38% 71% 8% / 51% 36% 51% 24%;
+  bottom: 0;
+  left: -10%;
+}
+
+#washingMachine.isOpen #door {
+  -webkit-transform: rotateY(45deg);
+          transform: rotateY(45deg);
+  -webkit-box-shadow: inset 5px 10px 0 0 transparent, 5px -1px 0 0 #b9bac9;
+          box-shadow: inset 5px 10px 0 0 transparent, 5px -1px 0 0 #b9bac9;
+}
+
+#washingMachine.isOpen #door:after {
+  -webkit-box-shadow: 5px -1px 0 0 #505166;
+          box-shadow: 5px -1px 0 0 #505166;
+}
+
+#washingMachine.isOpen #tub {
+  -webkit-box-shadow: inset 5px 10px 0 0 rgba(0, 0, 0, 0.1), 0 0 0 7px rgba(196, 196, 210, 0.3);
+          box-shadow: inset 5px 10px 0 0 rgba(0, 0, 0, 0.1), 0 0 0 7px rgba(196, 196, 210, 0.3);
+}
+
+#washingMachine.isWashing {
+  -webkit-animation-name: shake;
+          animation-name: shake;
+  -webkit-animation-duration: 100ms;
+          animation-duration: 100ms;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+#washingMachine.isWashing #controls:before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+#washingMachine.isWashing #tub {
+  -webkit-animation-name: rotate;
+          animation-name: rotate;
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+#washingMachine.isFilled #tub .clothes {
+  opacity: 1;
+}
+
+#washingMachine.isStarting {
+  -webkit-animation-duration: 200ms;
+          animation-duration: 200ms;
+  -webkit-animation-timing-function: cubic-bezier(0, -0.01, 0.61, 0.01);
+          animation-timing-function: cubic-bezier(0, -0.01, 0.61, 0.01);
+}
+
+#washingMachine.isStarting #tub {
+  -webkit-animation-duration: 1.2s;
+          animation-duration: 1.2s;
+  -webkit-animation-timing-function: cubic-bezier(0, -0.01, 0.61, 0.01);
+          animation-timing-function: cubic-bezier(0, -0.01, 0.61, 0.01);
+}
+
+@-webkit-keyframes shake {
+  0%, 100% {
+    -webkit-transform: translate(0, 0) rotate(0);
+            transform: translate(0, 0) rotate(0);
+  }
+  25% {
+    -webkit-transform: translate(-1.5px, 1.5px) rotate(0.5deg);
+            transform: translate(-1.5px, 1.5px) rotate(0.5deg);
+  }
+  50% {
+    -webkit-transform: translate(-0.5px, -0.5px) rotate(0.5deg);
+            transform: translate(-0.5px, -0.5px) rotate(0.5deg);
+  }
+}
+
+@keyframes shake {
+  0%, 100% {
+    -webkit-transform: translate(0, 0) rotate(0);
+            transform: translate(0, 0) rotate(0);
+  }
+  25% {
+    -webkit-transform: translate(-1.5px, 1.5px) rotate(0.5deg);
+            transform: translate(-1.5px, 1.5px) rotate(0.5deg);
+  }
+  50% {
+    -webkit-transform: translate(-0.5px, -0.5px) rotate(0.5deg);
+            transform: translate(-0.5px, -0.5px) rotate(0.5deg);
+  }
+}
+
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+#playground {
+  margin-top: 25px;
+  width: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#playground button {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background: #ececf4;
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  padding: 7px 10px;
+  -webkit-box-shadow: -1px 2px 0 0 rgba(0, 0, 0, 0.2);
+          box-shadow: -1px 2px 0 0 rgba(0, 0, 0, 0.2);
+  -webkit-transition: background 0.2s ease-in-out;
+  transition: background 0.2s ease-in-out;
+  font: inherit;
+  font-size: 0.8em;
+}
+
+#playground button#opening {
+  margin: 0 15px;
+}
+
+#playground button:hover:not(:disabled) {
+  background: white;
+  cursor: pointer;
+}
+
+#playground button::-moz-focus-inner {
+  border: 0;
+}
+
+#playground button:active:not(:disabled) {
+  -webkit-box-shadow: 0px 1px 0 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 1px 0 0 rgba(0, 0, 0, 0.2);
+}
+/*# sourceMappingURL=style.css.map */
